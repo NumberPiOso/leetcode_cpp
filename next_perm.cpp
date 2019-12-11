@@ -21,8 +21,21 @@ T max_el (vector<T>& nums){
     return max;
 }
 
+template <class T>
+
+T min_el (vector<T>& nums){
+    int n = nums.size();
+    T min = nums[0];
+    for (int i = 1; i < n; i++)
+        if (nums[i] < min) min = nums[i];
+    return min;
+}
+
+
+
 int main () {
     vector<int> v1 = {1, 2, 3, 16, 15};
     print_vec(v1);
-    cout << max_el(v1);   
+    cout << max_el(v1) << endl;
+    cout << min_el(v1) << endl;
 }
